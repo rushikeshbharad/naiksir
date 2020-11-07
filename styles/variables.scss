@@ -1,0 +1,38 @@
+$mainMargin: 150px;
+$mainBgSize: 637px 418px;
+$mainPadding: 56px;
+$imageTileGap: 56px;
+$imgTileWidth: calc((100vw - #{$mainPadding} * 2 - #{$imageTileGap} * 2 - #{$mainMargin} * 2) / 3);
+$imgTileHeight: calc(#{$imgTileWidth} * 3 / 2);
+$imgTilePadding: 32px;
+$imgOverlayBorderSize: calc(#{$imgTilePadding} / 3);
+$imgOverlayInfoCardPadding: 32px;
+$imgInfoFontSize: 18px;
+$imgCaptionFontSize: 24px;
+$imgCaptionTopMargin: 16px;
+$imageWidth: calc(#{$imgTileWidth} - #{$imgTilePadding} * 2);
+$magnifierSize: 32px;
+$magnifierFont: 24px;
+
+$containerBgColor: #282c34;
+$imgOverlayColor: rgba(0,0,0,0.4);
+$imgOverlayTextColor: #ffffff;
+$imgPopOverlayBgColor: rgba(0,0,0,0.9);
+$magnifierTextColor: #000000;
+$magnifierBgColor: #ffffff;
+
+
+$mainMargin_mobile: 0;
+$mainPadding_mobile: 16px;
+$imageTileGap_mobile: 16px;
+$imgTileWidth_mobile: calc(100vw - #{$mainPadding_mobile} - #{$imageTileGap_mobile});
+$imgTileHeight_mobile: calc(#{$imgTileWidth_mobile} * 3 / 2);
+$imgTilePadding_mobile: 16px;
+$imgOverlayBorderSize_mobile: calc(#{$imgTilePadding_mobile} / 3);
+$imgOverlayInfoCardPadding_mobile: 32px;
+$imgInfoFontSize_mobile: 18px;
+$imgCaptionFontSize_mobile: 24px;
+$imgCaptionTopMargin_mobile: 16px;
+$imageWidth_mobile: calc(#{$imgTileWidth_mobile} - #{$imgTilePadding_mobile} * 2);
+$magnifierSize_mobile: 32px;
+$magnifierFont_mobile: 24px;

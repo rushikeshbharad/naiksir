@@ -1,0 +1,88 @@
+@import "../styles/variables.scss";
+
+.popImageContainer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $imgPopOverlayBgColor;
+  animation: popBg 1000ms linear;
+  display: flex;
+  overflow: scroll;
+
+  img {
+    position: absolute;
+    object-fit: contain;
+    transition: all 500ms ease-in-out;
+    flex-shrink: 0;
+    cursor: all-scroll;
+  }
+
+  .magnifier {
+    display: flex;
+    flex-direction: row;
+    column-gap: calc(#{$magnifierSize} * 2);
+    position: fixed;
+    bottom: calc(#{$magnifierSize} * 2);
+    left: calc(50% - #{$magnifierSize} * 2);
+
+    div {
+      height: $magnifierSize;
+      width: $magnifierSize;
+      border-radius: calc(#{$magnifierSize} / 2);
+      background-color: $magnifierBgColor;
+      color: $magnifierTextColor;
+      font-size: $magnifierFont;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      padding-top: 5px;
+    }
+  }
+}
+
+@keyframes popBg {
+  0% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: $imgPopOverlayBgColor;
+  }
+}
+
+.container {
+  background-color: $containerBgColor;
+
+  .nav {
+
+  }
+
+  .main {
+    background-image: url(/white-canvas-texture.jpg);
+    background-repeat: repeat;
+    background-size: $mainBgSize;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 $mainMargin;
+    padding: $mainPadding;
+    row-gap: $imageTileGap;
+  }
+
+  .footer {
+
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    .main {
+      margin: 0;
+      padding: $mainPadding_mobile;
+      row-gap: $imageTileGap_mobile;
+    }
+  }
+}

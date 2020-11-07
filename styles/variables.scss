@@ -1,14 +1,15 @@
-$mainMargin: 150px;
+$mainMargin: 15vw;
 $mainBgSize: 637px 418px;
-$mainPadding: 56px;
-$imageTileGap: 56px;
+$mainPadding: 3.2vw;
+$imageTileGap: 1.2vw;
 $imgTileWidth: calc((100vw - #{$mainPadding} * 2 - #{$imageTileGap} * 2 - #{$mainMargin} * 2) / 3);
 $imgTileHeight: calc(#{$imgTileWidth} * 3 / 2);
-$imgTilePadding: 32px;
+$imgTilePadding: 3.2vw;
 $imgOverlayBorderSize: calc(#{$imgTilePadding} / 3);
-$imgOverlayInfoCardPadding: 32px;
-$imgInfoFontSize: 18px;
-$imgCaptionFontSize: 24px;
+$imgOverlayInfoCardPadding: 3.2vw;
+$infoCardMaxHeight: $imgTileWidth;
+$imgInfoFontSize: 1.4vw;
+$imgCaptionFontSize: 2vw;
 $imgCaptionTopMargin: 16px;
 $imageWidth: calc(#{$imgTileWidth} - #{$imgTilePadding} * 2);
 $magnifierSize: 32px;
@@ -20,7 +21,7 @@ $imgOverlayTextColor: #ffffff;
 $imgPopOverlayBgColor: rgba(0,0,0,0.9);
 $magnifierTextColor: #000000;
 $magnifierBgColor: #ffffff;
-
+$infoCardBgColor: rgba($containerBgColor, 0.6);
 
 $mainMargin_mobile: 0;
 $mainPadding_mobile: 16px;

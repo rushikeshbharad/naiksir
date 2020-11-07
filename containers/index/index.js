@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react"
 import Head from "next/head"
 import ImageComp from "components/image"
 import debounce from "lodash/debounce"
-import styles from "styles/index.module.scss"
+import styles from "containers/index/index.module.scss"
 
 const paintings = [
   {

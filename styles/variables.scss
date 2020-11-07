@@ -1,4 +1,6 @@
+// Main area desktop measurements
 $mainMargin: 15vw;
+$mainTopMargin: 2px;
 $mainBgSize: 637px 418px;
 $mainPadding: 3.2vw;
 $imageTileGap: 1.2vw;
@@ -14,7 +16,28 @@ $imgCaptionTopMargin: 16px;
 $imageWidth: calc(#{$imgTileWidth} - #{$imgTilePadding} * 2);
 $magnifierSize: 32px;
 $magnifierFont: 24px;
+$dropDownHeight: 2vw;
+$dropDownVerticalMargin: 0.25vw;
+$dropDownHorizontalMargin: 2vw;
+$dropDownPadding: 1vw;
+$dropDownValueBorder: 1px solid rgba(#000, 0.3);
+$countFontSize: 1.4vw;
+$countTop: 0.5vw;
+$countRight: 1vw;
 
+// Nav area desktop measurements
+$navPaddingHorizontal: 6.4vw;
+$navPaddingVertical: 2vw;
+$profileImageSize: 6vw;
+$profileHoverMargin: 1vw;
+$nameFontSize: 2.6vw;
+$nameLeftMargin: 2vw;
+$searchBoxPadding: 0.3vw 1.2vw;
+$searchBoxBorderRadius: 0.5vw;
+$searchButtonTopMargin: 0.5vw;
+$searchInputFont: 1.2vw;
+
+// Colors
 $containerBgColor: #282c34;
 $imgOverlayColor: rgba(0,0,0,0.4);
 $imgOverlayTextColor: #ffffff;
@@ -22,7 +45,13 @@ $imgPopOverlayBgColor: rgba(0,0,0,0.9);
 $magnifierTextColor: #000000;
 $magnifierBgColor: #ffffff;
 $infoCardBgColor: rgba($containerBgColor, 0.6);
+$navBgColor: rgba(#ffffff, 0.8);
+$searchBoxBgColor: #ffffff;
+$dropDownBgColor: #eeeeee;
+$dropDownTitleBgColor: #bbbbbb;
+$dropDownBgHoverColor: #dddddd;
 
+// Main area mobile measurements
 $mainMargin_mobile: 0;
 $mainPadding_mobile: 16px;
 $imageTileGap_mobile: 16px;

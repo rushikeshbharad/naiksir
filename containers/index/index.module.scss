@@ -38,7 +38,7 @@
       justify-content: center;
       align-items: center;
       cursor: pointer;
-      padding-top: 5px;
+      padding-top: 10px;
     }
   }
 }
@@ -56,7 +56,82 @@
   background-color: $containerBgColor;
 
   .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 $mainMargin;
+    padding: $navPaddingVertical $navPaddingHorizontal;
+    background-color: $navBgColor;
 
+    .profile {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .profileImage {
+        width: $profileImageSize;
+        height: $profileImageSize;
+        border-radius: calc(#{$profileImageSize} / 2);
+        transition: all 300ms ease-in-out;
+      }
+
+      .name {
+        font-size: $nameFontSize;
+        margin-left: $nameLeftMargin;
+        cursor: default;
+        white-space: pre-line;
+        line-height: 1;
+
+        small {
+          font-size: 0.7em;
+        }
+      }
+    }
+
+    .searchAndFilter {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      flex: 1;
+
+      .searchBox {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: $searchBoxBgColor;
+        padding: $searchBoxPadding;
+        border-radius: $searchBoxBorderRadius;
+        margin: 0 $dropDownHorizontalMargin $dropDownHorizontalMargin 0;
+
+        .searchInput {
+          border: none;
+          outline: none;
+          font-size: $searchInputFont;
+        }
+        .searchButton {
+          cursor: pointer;
+          margin-top: $searchButtonTopMargin;
+        }
+      }
+    }
+
+    .filterBox {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: calc(#{$dropDownHorizontalMargin} / 2);
+    }
+
+    .filterLink {
+      margin-right: $dropDownHorizontalMargin;
+      cursor: pointer;
+      text-decoration: underline;
+    }
   }
 
   .main {
@@ -67,9 +142,17 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0 $mainMargin;
+    margin: $mainTopMargin $mainMargin 0;
     padding: $mainPadding;
     row-gap: $imageTileGap;
+    position: relative;
+
+    .count {
+      position: absolute;
+      top: $countTop;
+      right: $countRight;
+      font-size: $countFontSize;
+    }
   }
 
   .footer {

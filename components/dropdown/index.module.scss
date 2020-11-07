@@ -1,0 +1,68 @@
+@import "styles/variables.scss";
+
+.dropDownHolder {
+  position: relative;
+  margin: $dropDownVerticalMargin $dropDownHorizontalMargin;
+  cursor: pointer;
+  outline: none;
+  caret-color: transparent;
+
+  .primaryValue, .primaryValueShowing {
+    background-color: $dropDownBgColor;
+    height: $dropDownHeight;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: calc(#{$dropDownHeight} * 0.25) $dropDownPadding 0;
+
+    &:after {
+      content: ">";
+      margin: 0 0 calc(#{$dropDownPadding} / 2) calc(#{$dropDownPadding});
+      font-size: 1.2em;
+      transition: all 300ms ease-in-out;
+    }
+  }
+
+  .primaryValue {
+    &:after {
+      transform: rotateZ(270deg);
+    }
+  }
+
+  .primaryValueShowing {
+    &:after {
+      transform: rotateZ(90deg);
+    }
+  }
+
+  .valuesHolder {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    white-space: nowrap;
+
+    .value, .title {
+      background-color: $dropDownBgColor;
+      height: $dropDownHeight;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: calc(#{$dropDownHeight} * 0.25) $dropDownPadding 0;
+      border: $dropDownValueBorder;
+      border-bottom: none;
+
+      &:last-of-type {
+        border-bottom: $dropDownValueBorder;
+      }
+
+      &:hover {
+        background-color: $dropDownBgHoverColor;
+      }
+    }
+
+    .title {
+      background-color: $dropDownTitleBgColor;
+    }
+  }
+}

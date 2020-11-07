@@ -1,0 +1,160 @@
+@import "styles/variables.scss";
+
+.imageTile {
+  display: flex;
+  justify-content: center;
+  height: $imgTileHeight;
+  width: $imgTileWidth;
+  padding: $imgTilePadding;
+  position: relative;
+
+  img {
+    width: $imageWidth;
+    object-fit: contain;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+    padding: $imgTilePadding;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: transparent;
+    color: transparent;
+
+    .infoCard {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: $containerBgColor;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      max-height: 0;
+      transition: all 500ms ease-in-out 500ms;
+
+      * {
+        opacity: 0;
+        transition: opacity 500ms ease-in-out;
+      }
+
+      .info {
+        font-size: $imgInfoFontSize;
+        text-align: center;
+      }
+
+      .caption {
+        font-size: $imgCaptionFontSize;
+        text-align: center;
+        margin-top: $imgCaptionTopMargin;
+      }
+    }
+
+    .borderTop, .borderBottom {
+      background-color: $containerBgColor;
+      position: absolute;
+      transition: all 500ms ease-in-out;
+      height: $imgOverlayBorderSize;
+      width: 0;
+    }
+
+    .borderLeft, .borderRight {
+      background-color: $containerBgColor;
+      position: absolute;
+      transition: all 500ms ease-in-out;
+      height: 0;
+      width: $imgOverlayBorderSize;
+    }
+
+    .borderTop, .borderLeft {
+      left: 0;
+      top: 0;
+    }
+
+    .borderBottom, .borderRight {
+      right: 0;
+      bottom: 0;
+    }
+
+    &:hover {
+      opacity: 1;
+      background-color: $imgOverlayColor;
+      color: $imgOverlayTextColor;
+
+      .infoCard {
+        max-height: 200px;
+        padding: $imgOverlayInfoCardPadding;
+
+        * {
+          opacity: 1;
+        }
+      }
+
+      .borderTop, .borderBottom {
+        width: $imgTileWidth;
+      }
+
+      .borderLeft, .borderRight {
+        height: $imgTileHeight;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .imageTile {
+    height: $imgTileHeight_mobile;
+    width: $imgTileWidth_mobile;
+    padding: $imgTilePadding_mobile;
+
+    img {
+      width: $imageWidth_mobile;
+    }
+
+    .overlay {
+      padding: $imgTilePadding_mobile;
+
+      .infoCard {
+        .info {
+          font-size: $imgInfoFontSize_mobile;
+        }
+
+        .caption {
+          font-size: $imgCaptionFontSize_mobile;
+          margin-top: $imgCaptionTopMargin_mobile;
+        }
+      }
+
+      .borderTop, .borderBottom {
+        height: $imgOverlayBorderSize_mobile;
+      }
+
+      .borderLeft, .borderRight {
+        width: $imgOverlayBorderSize_mobile;
+      }
+
+      &:hover {
+        .infoCard {
+          padding: $imgOverlayInfoCardPadding_mobile;
+        }
+
+        .borderTop, .borderBottom {
+          width: $imgTileWidth_mobile;
+        }
+
+        .borderLeft, .borderRight {
+          height: $imgTileHeight_mobile;
+        }
+      }
+    }
+  }
+}

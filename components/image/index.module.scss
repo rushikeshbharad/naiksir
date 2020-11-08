@@ -35,7 +35,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background-color: $containerBgColor;
+      background-color: $infoCardBgColor;
       display: flex;
       flex-direction: column;
       padding: 0;
@@ -91,7 +91,7 @@
       color: $imgOverlayTextColor;
 
       .infoCard {
-        max-height: 200px;
+        max-height: $infoCardMaxHeight;
         padding: $imgOverlayInfoCardPadding;
 
         * {

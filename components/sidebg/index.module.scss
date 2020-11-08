@@ -1,0 +1,126 @@
+@import "styles/variables.scss";
+
+$size: calc(#{$mainMargin} / 4);
+
+.leftBg, .rightBg {
+  position: fixed;
+  top: 0;
+  width: $mainMargin;
+  height: 100vh;
+
+  div {
+    width: $size;
+    height: $size;
+    background-size: $size $size;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+
+    &:nth-of-type(1) {
+      top: calc((25vh - #{$size}) / 2);
+    }
+    &:nth-of-type(2) {
+      top: calc(25vh + (25vh - #{$size}) / 2);
+    }
+    &:nth-of-type(3) {
+      top: calc(50vh + (25vh - #{$size}) / 2);
+    }
+    &:nth-of-type(4) {
+      top: calc(75vh + (25vh - #{$size}) / 2);
+    }
+  }
+}
+
+.leftBg {
+  left: 0;
+
+  div {
+    left: calc((#{$mainMargin} - #{$size}) / 2);
+  }
+}
+
+.rightBg {
+  right: 0;
+
+  div {
+    right: calc((#{$mainMargin} - #{$size}) / 2);
+  }
+}
+
+.acrylics {
+  background-image: url("./imgs/acrylics.svg");
+  animation: dolaRe-1 20s infinite ease-in;
+}
+
+.brush {
+  background-image: url("./imgs/brush.svg");
+  animation: dolaRe-2 20s infinite ease-in;
+}
+
+.canvas {
+  background-image: url("./imgs/canvas.svg");
+  animation: dolaRe-3 20s infinite ease-in;
+}
+
+.colorPalette {
+  background-image: url("./imgs/color-palette.svg");
+  animation: dolaRe-4 20s infinite ease-in;
+}
+
+.dholak {
+  background-image: url("./imgs/dholak.png");
+  animation: dolaRe-5 20s infinite ease-in;
+}
+
+.drumSet {
+  background-image: url("./imgs/drum.svg");
+  animation: dolaRe-6 20s infinite ease-in;
+}
+
+.pencil {
+  background-image: url("./imgs/pencil.png");
+  animation: dolaRe-7 20s infinite ease-in;
+}
+
+.tabla {
+  background-image: url("./imgs/tabla.svg");
+  animation: dolaRe-8 20s infinite ease-in;
+}
+
+@for $i from 1 through 8 {
+  @keyframes dolaRe-#{$i} {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+    10% {
+      transform: translateX(random(16) - 8px) translateY(random(16) - 8px);
+    }
+    20% {
+      transform: translateX(random(16) - 8px) translateY(random(16) - 8px);
+    }
+    30% {
+      transform: translateX(random(16) - 8px) translateY(random(16) - 8px);
+    }
+    40% {
+      transform: translateX(random(16) - 8px) translateY(random(16) - 8px);
+    }
+    50% {
+      transform: translateX(random(16) - 8px) translateY(random(16) - 8px);
+    }
+    60% {
+      transform: translateX(random(16) - 8px) translateY(random(16) - 8px);
+    }
+    70% {
+      transform: translateX(random(16) - 8px) translateY(random(16) - 8px);
+    }
+    80% {
+      transform: translateX(random(16) - 8px) translateY(random(16) - 8px);
+    }
+    90% {
+      transform: translateX(random(16) - 8px) translateY(random(16) - 8px);
+    }
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+  }
+}

@@ -1,8 +1,11 @@
+@import "styles/variables.scss";
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: fantasy;
+  background-color: $containerBgColor;
 }
 
 a {

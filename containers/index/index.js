@@ -203,8 +203,8 @@ export default withRouter(function Home({ router }) {
     clientY = event.clientY
     setImageStyle({
       ...imageStyle,
-      left: popImage.current.offsetLeft - xDiff,
-      top: popImage.current.offsetTop - yDiff
+      left: popImage.current.offsetLeft - (xDiff * 2),
+      top: popImage.current.offsetTop - (yDiff * 2)
     })
   }
 

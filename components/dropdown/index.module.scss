@@ -16,7 +16,7 @@
     padding: calc(#{$dropDownHeight} * 0.25) $dropDownPadding 0;
 
     &:after {
-      content: ">";
+      content: "❯";
       margin: 0 0 calc(#{$dropDownPadding} / 2) calc(#{$dropDownPadding});
       font-size: 1.2em;
       transition: all 300ms ease-in-out;
@@ -37,6 +37,8 @@
 
   .valuesHolder {
     position: absolute;
+    display: flex;
+    flex-direction: column;
     top: 100%;
     left: 0;
     z-index: 1;

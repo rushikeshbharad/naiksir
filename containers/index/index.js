@@ -3,6 +3,7 @@ import Head from "next/head"
 import { withRouter } from "next/router"
 import ImageComp from "components/image"
 import DropDown from "components/dropdown"
+import SideBg from "components/sidebg"
 import debounce from "lodash/debounce"
 import queryString from "query-string"
 import styles from "containers/index/index.module.scss"
@@ -359,9 +360,15 @@ export default withRouter(function Home({ router }) {
             <span className={styles.name}>
               {`Naik Sir's
               `}
-              <small>
-                Art gallery
-              </small>
+              <samp>A</samp>
+              <samp>r</samp>
+              <samp>t</samp> <samp>G</samp>
+              <samp>a</samp>
+              <samp>l</samp>
+              <samp>l</samp>
+              <samp>e</samp>
+              <samp>r</samp>
+              <samp>y</samp>
             </span>
           </div>
           <div className={styles.searchAndFilter}>
@@ -392,40 +399,38 @@ export default withRouter(function Home({ router }) {
                 {searchInput ? String.fromCharCode(9587) : (<>&#x1F50D;</>)}
               </span>
             </div>
-            {showFilters && (
-              <div className={styles.filterBox}>
-                <DropDown
-                  options={GENRE.map((v) => ({ value: v, text: v }))}
-                  name="Genre"
-                  value={genre}
-                  onSelect={(v) => handleQueryInRoute({ genre: v })}
-                />
-                <DropDown
-                  options={SHADE.map((v) => ({ value: v, text: v }))}
-                  name="Shade"
-                  value={shade}
-                  onSelect={(v) => handleQueryInRoute({ shade: v })}
-                />
-                <DropDown
-                  options={SIZE.map((v) => ({ value: v, text: v }))}
-                  name="Size"
-                  value={size}
-                  onSelect={(v) => handleQueryInRoute({ size: v })}
-                />
-                <DropDown
-                  options={MEDIUM.map((v) => ({ value: v, text: v }))}
-                  name="Medium"
-                  value={medium}
-                  onSelect={(v) => handleQueryInRoute({ medium: v })}
-                />
-                <DropDown
-                  options={ORIENTATION.map((v) => ({ value: v, text: v }))}
-                  name="Orientation"
-                  value={orientation}
-                  onSelect={(v) => handleQueryInRoute({ orientation: v })}
-                />
-              </div>
-            )}
+            <div className={showFilters ? styles.filterBox : styles.filterBoxHide}>
+              <DropDown
+                options={GENRE.map((v) => ({ value: v, text: v }))}
+                name="Genre"
+                value={genre}
+                onSelect={(v) => handleQueryInRoute({ genre: v })}
+              />
+              <DropDown
+                options={SHADE.map((v) => ({ value: v, text: v }))}
+                name="Shade"
+                value={shade}
+                onSelect={(v) => handleQueryInRoute({ shade: v })}
+              />
+              <DropDown
+                options={SIZE.map((v) => ({ value: v, text: v }))}
+                name="Size"
+                value={size}
+                onSelect={(v) => handleQueryInRoute({ size: v })}
+              />
+              <DropDown
+                options={MEDIUM.map((v) => ({ value: v, text: v }))}
+                name="Medium"
+                value={medium}
+                onSelect={(v) => handleQueryInRoute({ medium: v })}
+              />
+              <DropDown
+                options={ORIENTATION.map((v) => ({ value: v, text: v }))}
+                name="Orientation"
+                value={orientation}
+                onSelect={(v) => handleQueryInRoute({ orientation: v })}
+              />
+            </div>
             <span
               className={styles.filterLink}
               onClick={() => {
@@ -437,7 +442,7 @@ export default withRouter(function Home({ router }) {
                 }
               }}
             >
-              {showFilters ? "Clear filters" : "Add filters"}
+              {showFilters ? "Clear filters" : "Add search filters"}
             </span>
           </div>
         </nav>
@@ -458,6 +463,7 @@ export default withRouter(function Home({ router }) {
         <footer className={styles.footer}>
 
         </footer>
+        <SideBg />
       </div>
       {selectedImage && (
         <div

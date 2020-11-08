@@ -32,7 +32,10 @@ const DropDown = ({ options, value, onSelect, name }) => {
           {!!value && (
             <div
               className={styles.title}
-              onClick={() => onSelect("")}
+              onClick={() => {
+                setShow(false)
+                onSelect("")
+              }}
             >
               {name}
             </div>

@@ -10,144 +10,64 @@ import styles from "containers/index/index.module.scss"
 
 const paintingsImported = [
   {
-    url: "https://i.ibb.co/rxR9GFS/painting1.jpg",
-    caption: "Sunset",
-    genre: "Nature",
-    shade: "masta",
-    size: "1.5ft X 2ft",
-    medium: "Oil paint on canvas",
-    orientation: "Vertical",
-    keywords: "water,rocks,stones,sky,clouds,swing,branch,tree,sunset,orange,red,yellow,blue,ropes"
+    url: "https://i.ibb.co/Tr2t5Xp/IMG-20160929-134240-HDR.jpg",
+    caption: "Egyptian I",
+    genre: "Egyptian",
+    shade: "color",
+    size: `18" X 18"`,
+    medium: "Acrylics on canvas",
+    orientation: "Square",
+    keywords: "bird,mask,warrior,orange,blue,yellow"
   },
   {
-    url: "https://i.ibb.co/ncz8P6L/painting2.jpg",
-    caption: "Umbrella",
-    genre: "Rainy",
-    shade: "colors",
-    size: "1.5ft X 2ft",
-    medium: "Oil paint on canvas",
-    orientation: "Vertical",
-    keywords: "rain,umbrellas,yellow,red,blue,green"
+    url: "https://i.ibb.co/QP2Ctgm/IMG-20160929-133825-BURST2.jpg",
+    caption: "Egyptian II",
+    genre: "Egyptian",
+    shade: "color",
+    size: `24" X 24"`,
+    medium: "Acrylics on canvas",
+    orientation: "Square",
+    keywords: "couple,king,queen,throne,green,gown,skin,wall,wall painting"
   },
   {
-    url: "https://i.ibb.co/qpMWDKP/painting3.jpg",
-    caption: "Balloons",
-    genre: "Happy",
-    shade: "colors",
-    size: "1.5ft X 2ft",
-    medium: "Oil paint on canvas",
-    orientation: "Vertical",
-    keywords: "handshake,shakehands,girl,river,bridge,water,balloons,red,orange,yellow,blue,sky,buildings,ropes"
-  },
-  {
-    url: "https://i.ibb.co/C9Rkt9F/painting4.jpg",
-    caption: "Tree",
-    genre: "Abstract",
-    shade: "colors",
-    size: "1.25ft X 2ft",
-    medium: "Oil paint on canvas",
-    orientation: "Vertical",
-    keywords: "red,orange,tree,abstract,fall,framed,branch"
-  },
-  {
-    url: "https://i.ibb.co/pP1XCjb/painting5.jpg",
-    caption: "Cow boy",
-    genre: "People",
-    shade: "colors",
-    size: "2ft X 1.5ft",
-    medium: "Oil paint on canvas",
+    url: "https://i.ibb.co/kmsmN62/IMG-20170509-124829.jpg",
+    caption: "Egyptian III",
+    genre: "Egyptian",
+    shade: "color",
+    size: `20" X 14"`,
+    medium: "Water color on handmade",
     orientation: "Horizontal",
-    keywords: "person,man,hat,sunset,clouds,sky,sillhoutte,cowboy"
+    keywords: "green,blue,birds"
   },
   {
-    url: "https://i.ibb.co/rxR9GFS/painting1.jpg",
-    caption: "Sunset2",
-    genre: "Nature",
-    shade: "masta",
-    size: "1.5ft X 2ft",
-    medium: "Oil paint on canvas",
-    orientation: "Vertical"
+    url: "https://i.ibb.co/n0YCn0W/IMG-20180716-173243.jpg",
+    caption: "Egyptian IV",
+    genre: "Egyptian",
+    shade: "color",
+    size: `11" X 9"`,
+    medium: "Water color on handmade",
+    orientation: "Horizontal",
+    keywords: "wolf"
   },
   {
-    url: "https://i.ibb.co/ncz8P6L/painting2.jpg",
-    caption: "Umbrella2",
-    genre: "Rainy",
-    shade: "colors",
-    size: "1.5ft X 2ft",
-    medium: "Oil paint on canvas",
-    orientation: "Vertical"
+    url: "https://i.ibb.co/PFXTLdC/IMG-20180716-173352.jpg",
+    caption: "Egyptian V",
+    genre: "Egyptian",
+    shade: "color",
+    size: `9" X 11"`,
+    medium: "Water color on handmade",
+    orientation: "Vertical",
+    keywords: "bird,green"
   },
   {
-    url: "https://i.ibb.co/qpMWDKP/painting3.jpg",
-    caption: "Balloons2",
-    genre: "Happy",
-    shade: "colors",
-    size: "1.5ft X 2ft",
-    medium: "Oil paint on canvas",
-    orientation: "Vertical"
-  },
-  {
-    url: "https://i.ibb.co/C9Rkt9F/painting4.jpg",
-    caption: "Tree2",
-    genre: "Abstract",
-    shade: "colors",
-    size: "1.25ft X 2ft",
-    medium: "Oil paint on canvas",
-    orientation: "Vertical"
-  },
-  {
-    url: "https://i.ibb.co/pP1XCjb/painting5.jpg",
-    caption: "Cow boy2",
-    genre: "People",
-    shade: "colors",
-    size: "2ft X 1.5ft",
-    medium: "Oil paint on canvas",
-    orientation: "Horizontal"
-  },
-  {
-    url: "https://i.ibb.co/rxR9GFS/painting1.jpg",
-    caption: "Sunset3",
-    genre: "Nature",
-    shade: "masta",
-    size: "1.5ft X 2ft",
-    medium: "Oil paint on canvas",
-    orientation: "Vertical"
-  },
-  {
-    url: "https://i.ibb.co/ncz8P6L/painting2.jpg",
-    caption: "Umbrella3",
-    genre: "Rainy",
-    shade: "colors",
-    size: "1.5ft X 2ft",
-    medium: "Oil paint on canvas",
-    orientation: "Vertical"
-  },
-  {
-    url: "https://i.ibb.co/qpMWDKP/painting3.jpg",
-    caption: "Balloons3",
-    genre: "Happy",
-    shade: "colors",
-    size: "1.5ft X 2ft",
-    medium: "Oil paint on canvas",
-    orientation: "Vertical"
-  },
-  {
-    url: "https://i.ibb.co/C9Rkt9F/painting4.jpg",
-    caption: "Tree3",
-    genre: "Abstract",
-    shade: "colors",
-    size: "1.25ft X 2ft",
-    medium: "Oil paint on canvas",
-    orientation: "Vertical"
-  },
-  {
-    url: "https://i.ibb.co/pP1XCjb/painting5.jpg",
-    caption: "Cow boy3",
-    genre: "People",
-    shade: "colors",
-    size: "2ft X 1.5ft",
-    medium: "Oil paint on canvas",
-    orientation: "Horizontal"
+    url: "https://i.ibb.co/5YYLJ4w/IMG-20180716-173727.jpg",
+    caption: "Egyptian VI",
+    genre: "Egyptian",
+    shade: "color",
+    size: `11" X 9"`,
+    medium: "Water color on handmade",
+    orientation: "Horizontal",
+    keywords: "dog,bones,wall"
   }
 ]
 
